@@ -1,0 +1,12 @@
+{
+  "name": "frontcamp-angular-1",
+  "description": "Simple todo application",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "bootstrap": "3.3.x"
+  }
+}

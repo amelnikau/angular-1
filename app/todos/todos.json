@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Todo 1",
+    "id": 1,
+    "created": 1521914396090,
+    "status": "Todo"
+  },
+  {
+    "description": "Todo 2",
+    "id": 2,
+    "created": 1521414396090,
+    "status": "Completed"
+  },
+  {
+    "description": "Todo 3",
+    "id": 3,
+    "created": 1521514396090,
+    "status": "Todo"
+  },
+  {
+    "description": "Todo 4",
+    "id": 4,
+    "created": 1521614396090,
+    "status": "Todo"
+  },
+  {
+    "description": "Todo 5",
+    "id": 5,
+    "created": 1521714396090,
+    "status": "Completed"
+  }
+]

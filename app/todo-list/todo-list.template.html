@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="description">Name</option>
+          <option value="created">Create Date</option>
+        </select>
+      </p>
+
+      <button type="button" class="btn bg-primary" ng-click="$ctrl.addTodo()">Add Todo</button>
+
+    </div>
+    <div class="col-md-5">
+
+      <p>Todo:</p>
+      <ul class="list-group">
+        <li ng-repeat="todo in $ctrl.todos | filter:{description:$ctrl.query} | filter:{status:'Todo'} | orderBy:$ctrl.orderProp" class="list-group-item">
+          <input type="checkbox" ng-click="$ctrl.completeTodo(todo.id)"/>&nbsp;<a href="#!/todos/{{todo.id}}">{{todo.description}}</a><span>&nbsp;(Created: {{todo.created | date:'yyyy-MM-dd HH:mm:ss'}})</span>
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-md-5">
+      <p>Completed:</p>
+      <ul class="list-group">
+        <li ng-repeat="todo in $ctrl.todos | filter:{description:$ctrl.query} | filter:{status:'Completed'} | orderBy:$ctrl.orderProp" class="list-group-item">
+          <input type="checkbox" ng-click="$ctrl.restartTodo(todo.id)" checked />&nbsp;<a href="#!/todos/{{todo.id}}">{{todo.description}}</a><span>&nbsp;(Created: {{todo.created | date:'yyyy-MM-dd HH:mm:ss'}})</span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <form class="simple-form" name="todoForm">
+        <label>Description: <input type="text" name="description" ng-minlength="5" ng-model="$ctrl.todo.description" required/></label>
+        <span style="color: red" ng-show="todoForm.description.$touched && todoForm.description.$invalid">Description is required and min length is 5</span><br/>
+
+        <label>Completed: <input type="checkbox" ng-model="$ctrl.todo.status" ng-true-value="'Completed'" ng-false-value="'Todo'"/></label><br/>
+
+        <button type="submit" class="btn btn-primary" ng-disabled="todoForm.$invalid" ng-click="$ctrl.saveTodo($ctrl.todo)">Save</button>
+    </form>
+</div>

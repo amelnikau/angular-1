@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular 1 Frontcamp-3</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/todo/todo.module.js"></script>
+    <script src="core/todo/todo.service.js"></script>
+    <script src="todo-list/todo-list.module.js"></script>
+    <script src="todo-list/todo-list.component.js"></script>
+    <script src="todo-form/todo-form.module.js"></script>
+    <script src="todo-form/todo-form.component.js"></script>
+  </head>
+  <body>
+
+    <div ng-view></div>
+
+  </body>
+</html>
